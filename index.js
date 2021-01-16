@@ -45,12 +45,14 @@ Use the copy function below to do the following:
     2. Return a copy of the received array  
 */
 
-function copy(/*your code here*/){
+function copy(arr){
     /*your code here*/
+    var new_arr = [];
+    for(var i = 0; i < arr.length; i++){
+        new_arr.push(arr[i]);
+    }
+    return new_arr;
 }    
-
-
-
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -64,8 +66,9 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 
-function is31Flavors(/*your code here*/){
+function is31Flavors(arr){
    /*your code here*/
+   return arr.length === 31;
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -81,8 +84,11 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(/*your code here*/){
+function addFlavor(arr, new_flavor) {
    /*your code here*/
+   arr.unshift(new_flavor);
+   return arr;
+
 }
 
 
@@ -97,8 +103,10 @@ Use the removeLastFlavor function below to do the following:
     For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
 
-function removeLastFlavor(/*your code here*/){
+function removeLastFlavor(arr){
    /*your code here*/
+   arr.pop();
+   return arr;
 }
 
 
@@ -114,8 +122,9 @@ Use the getFlavorByIndex function below to do the following:
     For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(/*your code here*/){
+function getFlavorByIndex(arr, index){
     /*your code here*/
+    return arr[index];
 }
 
 
@@ -134,8 +143,11 @@ Use the removeFlavorByName function below to do the following:
     HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
+function removeFlavorByName(arr, flavor){
     /*your code here*/
+    index = arr.indexOf(flavor);
+    arr.splice(index,1);
+    return arr;
 }
 
 
@@ -160,8 +172,17 @@ Use the filterByWord function below to do the following:
     DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(/*your code here*/){
+function filterByWord(arr, word){
     /*your code here*/
+    var filteredArray = [];
+
+    for(var i = 0; i < arr.length; i++){
+        if (arr[i].includes(word))
+            filteredArray.push(arr[i]);
+    }
+
+    return filteredArray;
+
 }
 
 
