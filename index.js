@@ -145,7 +145,7 @@ Use the removeFlavorByName function below to do the following:
 
 function removeFlavorByName(arr, flavor){
     /*your code here*/
-    index = arr.indexOf(flavor);
+    const index = arr.indexOf(flavor);
     arr.splice(index,1);
     return arr;
 }
